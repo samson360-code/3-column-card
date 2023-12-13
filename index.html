@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontend Mentor | 3-column preview card component</title>
     <style>
-        .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-        *{box-sizing: border-box;}
-        .main {
-            height: 100vh;
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+        main{
+            height: 95vh;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
         section {
+            width: 920px;
             display: flex;
             justify-content: center;
             flex-direction: row;
-            margin: auto 10%;
+            margin: auto 0;
             padding: 2% 5%;
         }
 
         section>div {
-            
+
             color: rgba(255, 255, 255, 1);
             font-size: 11px;
             padding: 4% 4%;
@@ -38,6 +49,7 @@
         }
 
         div>h1 {
+            text-transform: uppercase;
             font-size: xx-large;
             font-weight: 700;
             margin: 23% auto;
@@ -51,7 +63,7 @@
             padding: 5% 20%;
             border: none;
             border-radius: 34px;
-            
+
         }
 
         section>div:first-child {
@@ -66,15 +78,36 @@
             background-color: hsl(179, 100%, 13%);
 
         }
-     @media (max-width:500px) {
-        section{
-            flex-direction: column;
+        button:hover{
+            background-color: inherit;
+            border: 1px solid black;
         }
-     }
+
+        @media (max-width:920px) {
+            section {
+                flex-direction: column;
+            }
+            div>p {
+            font-size: 27px;
+            margin: 3% auto;
+        }
+
+        div>h1 {
+            font-size: xx-large;
+            font-weight: 700;
+            margin: 3% auto;
+        }
+
+        .icon {
+            margin-bottom: 7%;
+        }
+
+        }
     </style>
 </head>
+
 <body>
-<div class="main">
+    <main>
     <section>
         <div>
             <div class="icon"><img src="./images/icon-sedans.svg" alt=""></div>
@@ -102,11 +135,12 @@
         </div>
     </section>
    
-     </div>
-     <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+</main>
+ <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
         Coded by <a href="#">samson mamuye</a>.
-      </div>
-</body>
+    </div>
 
+        
+    </body> 
 </html>
